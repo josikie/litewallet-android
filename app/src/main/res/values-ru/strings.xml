@@ -637,6 +637,8 @@
     <string name="UnlockScreen.touchIdTitle.android">Требуется аутентификация</string>
   <!-- Wallet unlocked message -->
   <string name="UnlockScreen.unlocked">Кошелек разблокирован</string>
+  <!-- Forget Seed Phrase or PIN -->
+  <string name="UnlockScreen.forgetSeedPhraseOrPIN">Забыли начальную фразу или PIN-код?</string>
   <!-- Update PIN caption text -->
   <string name="UpdatePin.caption">Запомните этот PIN-код. Если вы его забудете, что не сможете получить доступ к вашим биткойнам.</string>
   <!-- PIN creation info. -->

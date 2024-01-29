@@ -623,6 +623,8 @@
   <!-- Device authentication title -->
   <!-- Wallet unlocked message -->
   <string name="UnlockScreen.unlocked">Гаманець розблоковано</string>
+  <!-- Forget Seed Phrase or PIN -->
+  <string name="UnlockScreen.forgetSeedPhraseOrPIN">Забули пароль або PIN-код?</string>
   <!-- Update PIN caption text -->
   <string name="UpdatePin.caption">Запам’ятайте цей PIN-код. Якщо ви забудете його, ви не зможете отримати доступ до свого Litecoin.</string>
   <!-- PIN creation info. -->

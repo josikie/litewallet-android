@@ -650,6 +650,8 @@
   <string name="UnlockScreen.touchIdTitle.android">Kimlik doğrulama gerekli</string>
   <!-- Wallet unlocked message -->
   <string name="UnlockScreen.unlocked">Cüzdan Kilidi Açıldı</string>
+  <!-- Forget Seed Phrase or PIN -->
+  <string name="UnlockScreen.forgetSeedPhraseOrPIN">Tohum cümlenizi veya PIN kodunuzu mu unuttunuz?</string>
   <!-- Update PIN caption text -->
   <string name="UpdatePin.caption">Bu PIN kodunu unutmayın. Unutursanız, Litecoin\'inize erişemezsiniz.</string>
   <!-- PIN creation info. -->
