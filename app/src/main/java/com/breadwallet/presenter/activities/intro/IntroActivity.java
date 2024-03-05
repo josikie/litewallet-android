@@ -7,7 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.breadwallet.entities.CountryLang;
+import com.breadwallet.entities.CountryLangResource;
+import com.breadwallet.tools.adapter.LanguageAdapter;
 import com.google.android.material.snackbar.Snackbar;
 
 import com.breadwallet.BuildConfig;
@@ -26,6 +32,7 @@ import com.breadwallet.wallet.BRWalletManager;
 import com.platform.APIClient;
 
 import java.io.Serializable;
+import java.util.List;
 
 import timber.log.Timber;
 
@@ -36,6 +43,10 @@ public class IntroActivity extends BRActivity implements Serializable {
     public static boolean appVisible = false;
     private static IntroActivity app;
     private TextView versionText;
+
+    public RecyclerView listLangRecyclerView;
+
+    public List<CountryLang> countryAudioArrayList;
 
     public static IntroActivity getApp() {
         return app;
@@ -55,7 +66,17 @@ public class IntroActivity extends BRActivity implements Serializable {
         newWalletButton = (Button) findViewById(R.id.button_new_wallet);
         recoverWalletButton = (Button) findViewById(R.id.button_recover_wallet);
         versionText = findViewById(R.id.version_text);
+        listLangRecyclerView = findViewById(R.id.language_list);
         View parentLayout = findViewById(android.R.id.content);
+
+        countryAudioArrayList = new CountryLangResource().loadResources();
+        System.out.println("Hello");
+        System.out.println(countryAudioArrayList);
+        System.out.println("Hello");
+
+        LanguageAdapter languageAdapter = new LanguageAdapter(countryAudioArrayList);
+        listLangRecyclerView.setAdapter(languageAdapter);
+        listLangRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         setListeners();
         updateBundles();

@@ -39,7 +39,7 @@ public class BRButton extends Button {
     private static final float SHADOW_PRESSED = 0.88f;
     private static final float SHADOW_UNPRESSED = 0.95f;
     private float shadowOffSet = SHADOW_UNPRESSED;
-    private static final int ROUND_PIXELS = 16;
+    private static final int ROUND_PIXELS = 70;
     private boolean isBreadButton; //meaning is has the special animation and shadow
 
     public BRButton(Context context) {
