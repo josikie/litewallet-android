@@ -62,17 +62,6 @@ public class WriteDownActivity extends BRActivity {
             public void onClick(View v) {
                 if (!BRAnimator.isClickAllowed()) return;
                 /// DEV NOTES: Remove this call to auth Prompt
-                AuthManager.getInstance().authPrompt(WriteDownActivity.this, null, getString(R.string.VerifyPin_continueBody), true, false, new BRAuthCompletion() {
-                    @Override
-                    public void onComplete() {
-                        PostAuth.getInstance().onPhraseCheckAuth(WriteDownActivity.this, false);
-                    }
-
-                    @Override
-                    public void onCancel() {
-
-                    }
-                });
 
             }
         });

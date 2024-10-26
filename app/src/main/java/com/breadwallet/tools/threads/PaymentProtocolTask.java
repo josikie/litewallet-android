@@ -321,19 +321,7 @@ public class PaymentProtocolTask extends AsyncTask<String, String, String> {
                     @Override
                     public void run() {
                         /// DEV NOTES: Remove this call to auth Prompt
-
-                        AuthManager.getInstance().authPrompt(app, "Confirmation", message, false, false, new BRAuthCompletion() {
-                            @Override
-                            public void onComplete() {
-                                PostAuth.getInstance().setTmpPaymentRequest(paymentRequest);
-                                PostAuth.getInstance().onPaymentProtocolRequest(app, false);
-                            }
-
-                            @Override
-                            public void onCancel() {
-                                Timber.d("timber: onCancel: ");
-                            }
-                        });
+                        
                     }
                 });
             }
